@@ -1,0 +1,2 @@
+-- Use migration_shadril_v6_final.sql instead.
+-- This file is intentionally left as a notice so the old duplicate-account migration is not run again.

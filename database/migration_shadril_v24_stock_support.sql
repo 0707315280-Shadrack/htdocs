@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS support_contact_log (
+  contact_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  admin_id INT UNSIGNED NULL,
+  customer_id INT UNSIGNED NULL,
+  channel ENUM('PHONE','WHATSAPP','EMAIL','PRIVATE_CHAT') NOT NULL,
+  reference_value VARCHAR(255) NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX(customer_id), INDEX(channel), INDEX(created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
